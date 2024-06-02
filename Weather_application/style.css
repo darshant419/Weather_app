@@ -1,0 +1,256 @@
+* {
+    margin:0;
+    padding:0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+   
+}
+
+
+body{
+  background: linear-gradient(to right, #a9d3f9 0%, #9ffaff 100%);
+}
+
+.main_container h1{
+  font-size: 2rem;
+  text-align: center;
+  padding:15px;
+}
+
+.card{
+    width:90%;
+    max-width: 470px;
+    color:#fff;
+    margin: 40px auto;
+    border-radius: 20px;
+    padding:40px 35px;
+    text-align: center;
+    background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+}
+
+.search{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    button{
+        width: 60px;
+        height: 60px;
+        border:0;
+        outline: 0;
+        background: #ebfffc;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+    img{
+        width:16px;
+    }
+
+}
+
+.search input{
+    border:0;
+    outline:0;
+    color:#555;
+    font-size: 18px;
+    padding:10px 25px;
+    height:60px;
+    border-radius:30px;
+    flex:1;
+    margin-right: 16px;
+
+}
+
+.weather{
+    font-size: 80px;
+    font-weight: 500;
+    display:none;
+    transition: all ease-in-out 2s;
+
+    h1{
+        margin-top: -30px;
+        font-size: 80px;
+        font-weight: 500;
+    }
+    h2{
+        font-size: 45px;
+        font-weight: 400;
+        margin-top: -10px;
+    }
+
+
+    .weather-icon {
+        width:150px;
+        margin-top:20px;
+
+    }
+
+}
+
+.details{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 15px;
+    margin-top:20px;
+
+
+    .col{
+        display: flex;
+        align-items: center;
+        text-align: left;
+
+        img{
+            width:40px;
+            margin-right:10px;
+        }
+
+        .humidity, .wind{
+            font-size: 24px;
+            margin-top: -6px;
+        }
+    }
+
+}
+
+.error{
+    font-size: 18px;
+    color:rgb(89, 50, 50);
+    font-weight: 800;
+    margin-top: 5%;
+    margin-left: 5%;
+    text-align: left;
+    display: none;
+    transition: all ease-in-out 2s;
+}
+
+.fade-in {
+	-webkit-animation: fade-in 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+ @-webkit-keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+
+  .scale-in-center {
+	-webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+ @-webkit-keyframes scale-in-center {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 1;
+    }
+  }
+  @keyframes scale-in-center {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  
+  /* day night switch toggle css */
+  .toggle {
+    display: flex;
+    justify-content: right;
+    position: relative;
+  float: right;
+    width: 60px;
+    height: 34px;
+    top:5px;
+    right:5px;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition:.4s;
+    transition:.4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition:.4s;
+    transition:.4s;
+  }
+  
+  input:checked +.slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus +.slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked +.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+  body.dark-mode {
+    background: #333;
+    color: #fff;
+  }
+  
+  body.night-mode {
+    background: #000;
+    color: #ccc;
+  }
+
+
+
+  .ml3 {
+    font-weight: 900;
+    font-size: 3.5em;
+  }
